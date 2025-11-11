@@ -89,6 +89,12 @@
             }
         }
 
+        class torre extends Peca{
+            constructor (cor) {
+                super ('Torre', cor == 'branca' ? '♖' : '♜', cor )
+            }
+        }
+
         const tabuleiro = new Tabuleiro(document.getElementById("tabuleiro"));
         tabuleiro.criarCasas();
         tabuleiro.adicionarPecas();
