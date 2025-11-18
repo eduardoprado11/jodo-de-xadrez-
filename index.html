@@ -74,7 +74,7 @@
             adicionarPecas(){
                 const ordemPecas = [Torre, Cavalo, Bispo, Rainha, Rei, Bispo, Cavalo, Torre]
                 ordemPecas.forEach(
-                    (Tipoèca, coluna) => {
+                    (TipoPeca, coluna) => {
                     const peca = new TipoPeca("preta");
                         peca.renderizar(this.casas[0][coluna])
                     
@@ -138,7 +138,7 @@
 
         const tabuleiro = new Tabuleiro(document.getElementById("tabuleiro"));
         tabuleiro.criarCasas();
-        tabuleiro.adicionarPecas();
+        tabuleiro.adicionarPeacas();
     </script>
 </body>
 
