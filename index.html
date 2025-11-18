@@ -72,18 +72,17 @@
             }
 
             adicionarPecas(){
-                const ordemPecas = [Torre, Cavalo, Bispo, Rainha, Rei, Bispo, Cavalo, Torre]
+                const ordemPecas = [Torre, Cavalo, Bispo, Rainha, Rei, Bispo, Cavalo, Torre];
                 ordemPecas.forEach(
-                    (TipoPeca, coluna) => {
+                    (TipoPeca,coluna) => {
                     const peca = new TipoPeca("preta");
-                        peca.renderizar(this.casas[0][coluna])
-                    
+                    peca.renderizar(this.casas[0][coluna])
                  }
                 );
 
-                for(let i = 0; i < 8; i++){
+                for (let i = 0; i < 8; i++){
                     new Peao("preta").renderizar(this.casas[1][i])
-                }
+                }   
             }
         }
 
@@ -138,7 +137,7 @@
 
         const tabuleiro = new Tabuleiro(document.getElementById("tabuleiro"));
         tabuleiro.criarCasas();
-        tabuleiro.adicionarPeacas();
+        tabuleiro.adicionarPecas();
     </script>
 </body>
 
