@@ -72,8 +72,8 @@
             }
 
             adicionarPecas(){
-                const peca = new Peca('Torre', '♖', 'branca');
-                peca.renderizar(this.casas[0][0])
+                const torreBranca = new Torre('branca');
+                torreBranca.renderizar(this.casas[0][0])
             }
         }
 
@@ -89,11 +89,42 @@
             }
         }
 
-        class torre extends Peca{
-            constructor (cor) {
-                super ('Torre', cor == 'branca' ? '♖' : '♜', cor )
+        class Torre extends Peca {
+            constructor(cor) {
+                super('Torre', cor === 'branca' ? '♖' : '♜', cor);
             }
         }
+
+        class Cavalo extends Peca {
+            constructor(cor) {
+                super("Cavalo", cor === "branca" ? "♘" : "♞", cor);
+            }
+        }
+
+        class Bispo extends Peca {
+            constructor(cor) {
+                super("Bispo", cor === "branca" ? "♗" : "♝", cor);
+            }
+        }
+
+        class Rainha extends Peca {
+            constructor(cor) {
+                super("Rainha", cor === "branca" ? "♕" : "♛", cor);
+            }
+        }
+
+        class Rei extends Peca {
+            constructor(cor) {
+                super("Rei", cor === "branca" ? "♔" : "♚", cor);
+            }
+        }
+
+        class Peao extends Peca {
+            constructor(cor) {
+                super("Peão", cor === "branca" ? "♙" : "♟", cor);
+            }
+        }
+
 
         const tabuleiro = new Tabuleiro(document.getElementById("tabuleiro"));
         tabuleiro.criarCasas();
